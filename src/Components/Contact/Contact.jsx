@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Contact.css";
 import mail_icon from "../../assets/mail_icon.png";
 import localisation_icon from "../../assets/localisation_icon.png";
@@ -6,6 +6,28 @@ import tel_icon from "../../assets/tel_icon.png";
 
 const Contact = () => {
   const [result, setResult] = React.useState("");
+  const newContactLeftRef = useRef();
+  const newContactRightRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newContactLeftRef.current.classList.add("animed-left");
+        observer.unobserve(newContactLeftRef.current);
+      }
+    });
+    observer.observe(newContactLeftRef.current);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newContactRightRef.current.classList.add("animed-right");
+        observer.unobserve(newContactRightRef.current);
+      }
+    });
+    observer.observe(newContactRightRef.current);
+  }, []);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -33,7 +55,7 @@ const Contact = () => {
   return (
     <div id="contact" className="contact">
       <div className="contact-section">
-        <div className="contact-left">
+        <div ref={newContactLeftRef} className="contact-left">
           <h1>Pour me contacter</h1>
           <p>
             Je suis actuellement disponible, vous pouvez me contacter par
@@ -51,7 +73,11 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <form onSubmit={onSubmit} className="contact-right">
+        <form
+          ref={newContactRightRef}
+          onSubmit={onSubmit}
+          className="contact-right"
+        >
           <input
             type="email"
             placeholder="Entrez votre Email"

@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Skills.css";
 import Node from "../../assets/node.png";
 
 const Skills = () => {
+  const newSkillsRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newSkillsRef.current.classList.add("animed-left");
+        observer.unobserve(newSkillsRef.current);
+      }
+    });
+    observer.observe(newSkillsRef.current);
+  });
+
   return (
-    <div id="skills" className="Skills">
+    <div ref={newSkillsRef} id="skills" className="Skills">
       <div className="Front-end">
         <h1>Front-End</h1>
         <ul>

@@ -12,6 +12,7 @@
     background-position: center;
     background-size: cover;
     border: 10px solid gray;
+    border-radius: 50%;
     animation: profile__animate 6s ease-in-out infinite 1s;
 }
 
@@ -85,7 +86,24 @@
     transform: scale(1.3);
 }
 
-
+/* Animation de droite à gauche */
+@keyframes slideInFromLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+.animate-left {
+    animation: slideInFromLeft 1.5s ease-out;
+}
+  
+/* --- MEDIA QUERY --- */
 @media (max-width: 1280px) {
     .hero-section {
         flex-direction: column;

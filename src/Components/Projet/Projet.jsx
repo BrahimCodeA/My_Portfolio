@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./Projet.css";
 import Projet1 from "../../assets/Projet-1.jpeg";
 import Projet2 from "../../assets/Projet-2.jpeg";
@@ -6,8 +6,20 @@ import icon_github from "../../assets/icon-github.png";
 import icon_domaine from "../../assets/icon-domaine.png";
 
 const Projet = () => {
+  const newProjetRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newProjetRef.current.classList.add("animed-right");
+        observer.unobserve(newProjetRef.current);
+      }
+    });
+    observer.observe(newProjetRef.current);
+  }, []);
+
   return (
-    <div id="projet" className="Projets">
+    <div ref={newProjetRef} id="projet" className="Projets">
       <div className="projet">
         <h1 className="titre">Site E-commerce Animé</h1>
         <img src={Projet1} alt="Ecommerce" className="projet-img" />

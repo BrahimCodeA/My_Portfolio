@@ -1,18 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./About.css";
 import CV from "../../assets/Ibrahim_CV.jpg";
-import icon_download from "../../assets/icon-download.png";
 import Cv_pdf from "../../assets/Ibrahim_CV.pdf";
 
 const About = () => {
+  const newsletterRef = useRef();
+  const newsletterRef2 = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newsletterRef.current.classList.add("animed-left");
+        observer.unobserve(newsletterRef.current);
+      }
+    });
+    observer.observe(newsletterRef.current);
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        newsletterRef2.current.classList.add("animed-right");
+        observer.unobserve(newsletterRef2.current);
+      }
+    });
+    observer.observe(newsletterRef2.current);
+  }, []);
+
   return (
     <div id="about" className="abouts">
-      <div className="about-img">
+      <div ref={newsletterRef} className="about-img">
         <a href={Cv_pdf} target="_blank">
           <img src={CV} alt="CV" className="img-cv" />
         </a>
       </div>
-      <div className="about-text">
+      <div ref={newsletterRef2} className="about-text">
         <p>
           <strong>Je suis à la recherche d'une alternance</strong> pour
           développer mes compétences et{" "}

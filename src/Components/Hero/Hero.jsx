@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Hero.css";
 import hero from "../../assets/hero.jpeg";
 import dark_arrow from "../../assets/dark-arrow.png";
@@ -7,12 +7,25 @@ import icon_github from "../../assets/icon-github.png";
 import icon_domaine from "../../assets/icon-domaine.png";
 
 const Hero = () => {
+  useEffect(() => {
+    const heroLeft = document.querySelector(".hero-left");
+    const heroRight = document.querySelector(".hero-right");
+
+    if (heroLeft) {
+      heroLeft.classList.add("animate-left");
+    }
+    if (heroRight) {
+      heroRight.classList.add("animate-right");
+    }
+  }, []);
+
   const scrollToContact = () => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <div id="home" class="hero container">
       <div className="hero-section">
