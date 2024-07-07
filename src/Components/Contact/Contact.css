@@ -96,6 +96,7 @@
     padding: 10px 50px;
     cursor: pointer;
     transition: 0.4s;
+    border: none;
 }
 .contact-submit:hover {
     transform: scale(1.1);

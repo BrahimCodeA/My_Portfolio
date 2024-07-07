@@ -63,7 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    border: none;
     cursor: pointer;
     transform: translateX(0);
     transition: 0.4s ease; 
