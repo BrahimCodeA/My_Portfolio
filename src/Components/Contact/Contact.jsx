@@ -69,7 +69,7 @@ const Contact = () => {
               <img src={tel_icon} alt="" /> <p>+33 6 60 70 20 29</p>
             </div>
             <div className="contact-detail">
-              <img src={localisation_icon} alt="" /> <p>Paris 20éme, France</p>
+              <img src={localisation_icon} alt="" /> <p>Paris 20ème, France</p>
             </div>
           </div>
         </div>
