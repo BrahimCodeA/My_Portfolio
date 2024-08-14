@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ScrollUp.css";
 import scroll_up from "../../assets/scrollup.png";
 
 const ScrollUp = () => {
-  window.addEventListener("scroll", function () {
-    const scrollUp = document.querySelector(".scrollup");
-    if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
-    else scrollUp.classList.remove("show-scroll");
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollUp = document.querySelector(".scrollup");
+      if (window.scrollY >= 560) {
+        scrollUp.classList.add("show-scroll");
+      } else {
+        scrollUp.classList.remove("show-scroll");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <a href="#" className="scrollup">
-      <img src={scroll_up} className="scrollup_icon"></img>
+      <img src={scroll_up} className="scrollup_icon" alt="Scroll to top" />
     </a>
   );
 };

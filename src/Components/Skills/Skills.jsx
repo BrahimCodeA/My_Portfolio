@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./Skills.css";
 import Node from "../../assets/node.png";
+import express from "../../assets/express.svg";
 
 const Skills = () => {
   const newSkillsRef = useRef();
@@ -26,7 +27,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/javascript.svg"
                 alt="JavaScript Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -36,7 +37,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/react.svg"
                 alt="React Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -46,12 +47,12 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/html5.svg"
                 alt="HTML Logo"
-                class="logo"
+                className="logo"
               />
               <img
                 src="https://simpleicons.org/icons/css3.svg"
                 alt="CSS Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -61,7 +62,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/tailwindcss.svg"
                 alt="Tailwind CSS Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -71,7 +72,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/bootstrap.svg"
                 alt="Bootstrap Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -82,7 +83,23 @@ const Skills = () => {
         <ul>
           <li>
             <h3>
-              - Node.js <img src={Node} alt="Node.js Logo" class="logo" />
+              - Node.js <img src={Node} alt="Node.js Logo" className="logo" />
+            </h3>
+          </li>
+          <li>
+            <h3>
+              - MongoDB{" "}
+              <img
+                src="https://simpleicons.org/icons/mongodb.svg"
+                alt="MongoDB Logo"
+                className="logo"
+              />
+            </h3>
+          </li>
+          <li>
+            <h3>
+              - Express{" "}
+              <img src={express} alt="Express logo" className="logo" />
             </h3>
           </li>
           <li>
@@ -91,7 +108,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/python.svg"
                 alt="Python Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>
@@ -101,17 +118,7 @@ const Skills = () => {
               <img
                 src="https://simpleicons.org/icons/django.svg"
                 alt="Django Logo"
-                class="logo"
-              />
-            </h3>
-          </li>
-          <li>
-            <h3>
-              - MongoDB{" "}
-              <img
-                src="https://simpleicons.org/icons/mongodb.svg"
-                alt="MongoDB Logo"
-                class="logo"
+                className="logo"
               />
             </h3>
           </li>

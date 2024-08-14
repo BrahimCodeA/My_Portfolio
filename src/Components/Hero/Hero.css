@@ -35,20 +35,19 @@
 
 .hero-left h1 {
     font-size: 40px;
-    color: white;
     display: flex;
 }
 .hero-left h2 {
-    color: rgba(189, 189, 189, 0.727);
+    color: gray;
     font-size: 22px;
     display: flex;
-    font-weight: 300;
+    font-weight: 00;
     margin-bottom: 10px;
 }
 .hero-left p {
     color: #777;
     font-size: 30px;
-    font-weight: 100;
+    font-weight: 300;
     margin-bottom: 10px;
 }
 .hero-left {
@@ -81,6 +80,8 @@
     width: 30px;
     margin-left: 10px;
     transition: 0.4s;
+    background-color: black;
+    padding: 2px;
 }
 .hero-left h1 img:hover {
     transform: scale(1.3);

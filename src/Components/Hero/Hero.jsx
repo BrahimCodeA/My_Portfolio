@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <div id="home" class="hero container">
       <div className="hero-section">
-        <div class="hero-left">
+        <div className="hero-left">
           <h1>
             Ibrahim Daoudi
             <a

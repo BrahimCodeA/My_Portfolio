@@ -19,14 +19,12 @@
     transition: transform 1s ease-out;
 }
 .abouts .about-text h1 {
-    color: white;
     justify-content: center;
     align-items: center;
     display: flex;
 }
 .abouts .about-text p {
-    color: white;
-    font-weight: 350;
+    font-weight: 500;
     font-size: 20px;
     border-radius: 10px;
     margin-bottom: 1.1em;

@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./About.css";
-import CV from "../../assets/Daoudi_CV.jpg";
-import Cv_pdf from "../../assets/Daoudi_CV.pdf";
+import CV from "../../assets/IbrahimDaoudi_CV.jpg";
+import Cv_pdf from "../../assets/IbrahimDaoudi_CV.pdf";
 
 const About = () => {
   const newsletterRef = useRef();
@@ -44,8 +44,11 @@ const About = () => {
           suis constamment à la recherche de nouveaux défis pour approfondir mes
           connaissances en programmation et{" "}
           <strong>contribuer à de nouveaux projets.</strong>
-          <br /> <hr className="hr-2" /> Je travaille généralement avec{" "}
-          <strong>JavaScript, React, Node.js et MongoDB,</strong>
+          <br /> <hr className="hr-2" /> J'aime créer des API Rest (Crud) et je
+          travaille généralement avec{" "}
+          <strong>
+            JavaScript, React, Node.js, Express, MongoDB et JWT Token
+          </strong>
           <br /> je suis sur que cette opportunité me permettra de grandir
           professionnellement{" "}
           <strong>

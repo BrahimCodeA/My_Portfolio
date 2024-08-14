@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import "./Projet.css";
 import Projet1 from "../../assets/Projet-1.jpeg";
 import Projet2 from "../../assets/Projet-2.jpeg";
+import Projet3 from "../../assets/Projet-3.jpg";
 import icon_github from "../../assets/icon-github.png";
 import icon_domaine from "../../assets/icon-domaine.png";
 
@@ -21,33 +22,27 @@ const Projet = () => {
   return (
     <div ref={newProjetRef} id="projet" className="Projets">
       <div className="projet">
-        <h1 className="titre">Site E-commerce Animé</h1>
-        <img src={Projet1} alt="Ecommerce" className="projet-img" />
+        <h1 className="titre">API REST (Crud) ProfDev</h1>
+        <img src={Projet3} alt="API Rest" className="projet-img" />
         <p>
-          Projet développé avec une stack composée de Python, Django, MySQL,
-          API, PythonAnywhrere et Tailwind CSS. Intégration complète de la
-          gestion des utilisateurs, de l'authentification sécurisée et de la
-          gestion de la base de données.
+          <p>
+            API REST de type CRUD développée avec Node.js, Express, MongoDB,
+            Mongoose, JWT et GoogleAuth. Pour le frontend, j'ai utilisé React et
+            CSS. Cette API permet de gérer les utilisateurs ainsi que leurs
+            posts. Elle inclut des fonctionnalités d'authentification sécurisée.
+          </p>
         </p>
         <div className="links">
-          <a
-            href="https://dekubrahim.pythonanywhere.com/"
-            className="gray-link"
-            target={"_blank"}
-          >
-            Visiter le site <img src={icon_domaine} alt="" className="img" />
+          <a href="#" className="gray-link" target={"_blank"}>
+            <img src={icon_domaine} alt="" className="img" />
           </a>
-          <a
-            href="https://github.com/BrahimCodeA/django-projet"
-            className="black-link"
-            target={"__blank"}
-          >
-            Voir code source <img src={icon_github} alt="" className="img" />
+          <a href="#" className="black-link" target={"__blank"}>
+            <img src={icon_github} alt="" className="img" />
           </a>
         </div>
       </div>
       <div className="projet">
-        <h1 className="titre">Jeu MMORPG - Dragon Repeller</h1>
+        <h1 className="titre">Jeu MMORPG - DR</h1>
         <img src={Projet2} alt="MMORPG - Jeu" className="projet-img" />
         <p>
           Création d'un jeu MMORPG en utilisant JavaScript, HTML, CSS, Github,
@@ -61,14 +56,40 @@ const Projet = () => {
             target={"_blank"}
             className="gray-link"
           >
-            Visiter le site <img src={icon_domaine} alt="" className="img" />
+            <img src={icon_domaine} alt="" className="img" />
           </a>
           <a
             href="https://github.com/BrahimCodeA/JeuDuDragon"
             className="black-link"
             target={"_blank"}
           >
-            Voir code source <img src={icon_github} alt="" className="img" />
+            <img src={icon_github} alt="" className="img" />
+          </a>
+        </div>
+      </div>
+      <div className="projet">
+        <h1 className="titre">Site E-commerce Animé</h1>
+        <img src={Projet1} alt="Ecommerce" className="projet-img" />
+        <p>
+          Projet e-commerce style manga développé avec une stack composée de
+          Python, Django, MySQL, API, PythonAnywhrere et Tailwind CSS.
+          Intégration complète de la gestion des utilisateurs, de
+          l'authentification sécurisée et de la gestion de la base de données.
+        </p>
+        <div className="links">
+          <a
+            href="https://dekubrahim.pythonanywhere.com/"
+            className="gray-link"
+            target={"_blank"}
+          >
+            <img src={icon_domaine} alt="" className="img" />
+          </a>
+          <a
+            href="https://github.com/BrahimCodeA/django-projet"
+            className="black-link"
+            target={"__blank"}
+          >
+            <img src={icon_github} alt="" className="img" />
           </a>
         </div>
       </div>

@@ -1,6 +1,6 @@
 nav {
     width: 100%;
-    color: white;
+    margin-left: 5%;
     padding: 10px 4px 0 4px;
     position: fixed;
     top: 0;
@@ -14,6 +14,7 @@ nav  .nav-menu {
     align-items: center;
     justify-content: center;
 }
+
 nav .nav-menu  li {
     margin: 0 25px;
     font-size: 18px;
@@ -32,6 +33,19 @@ nav h3 {
     color: gray;
     transform: translateX(0);
     transition: 0.4s;
+}
+nav .theme {
+    margin-left: 5%;
+    margin-right: 2%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: 0.4s;
+}
+nav .theme:hover {
+    transform: scale(1.1);
 }
 nav .btn {
     padding: 3px 7px;
@@ -85,7 +99,7 @@ nav .active-contact:hover {
     width: 20px;
 }
 .menu span {
-    background: white;
+    background: gray;
     height: 5px;
     border-radius: 5px;
     display: block;
@@ -95,6 +109,7 @@ nav .active-contact:hover {
 
 .openmenu .line-1 {
     transform: translate(45%, 145%) rotate(135deg);
+    background-color: rgba(0, 0, 0, 0.402);
   }
   
 .openmenu .line-2 {
@@ -102,8 +117,8 @@ nav .active-contact:hover {
   }
   
 .openmenu .line-3 {
-    transform: translate(45%) rotate(45deg);
-   
+    transform: translate(45%) rotate(45deg);   
+    background-color: rgba(0, 0, 0, 0.402);
   }
 
 @media (max-width: 1430px) {
@@ -139,6 +154,12 @@ nav .active-contact:hover {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+@media (max-width: 490px) {
+    nav .btn {
+        margin-left: 5%;
     }
 }
 

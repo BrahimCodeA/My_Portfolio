@@ -1,35 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import Sun_icon from "../../assets/icon_sun.png";
+import Moon_icon from "../../assets/icon_moon.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("dark-mode");
+
+  const scrollOffset = -170;
+
+  const toggleTheme = () => {
+    const newTheme = theme === "dark-mode" ? "light-mode" : "dark-mode";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    document.body.className = newTheme;
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+      document.body.className = savedTheme;
+    }
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollOffset = -170;
-  const [sticky, setSticky] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setSticky(true);
-      } else {
-        setSticky(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <div className="navbar">
-      <nav className={`container ${sticky ? "dark-nav" : ""}`}>
+    <div className={`navbar ${theme}`}>
+      <nav>
+        <button onClick={toggleTheme} className="theme">
+          <img
+            src={theme === "dark-mode" ? Sun_icon : Moon_icon}
+            alt={theme === "dark-mode" ? "Light mode" : "Dark mode"}
+            className="theme-icon"
+          />
+        </button>
         <button className="btn">ID</button>
         <h3 className="active">Ibrahim.</h3>
         <div
@@ -54,7 +63,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link to="about" smooth={true} duration={500} offset={scrollOffset}>
-              À Propos
+              Propos
             </Link>
           </li>
           <li>
@@ -74,7 +83,7 @@ const Navbar = () => {
               duration={500}
               offset={scrollOffset}
             >
-              Projet
+              Projets
             </Link>
           </li>
           <li>
@@ -82,8 +91,8 @@ const Navbar = () => {
               to="contact"
               smooth={true}
               duration={500}
-              className="active-contact"
               offset={scrollOffset}
+              className="active-contact"
             >
               Contact
             </Link>
