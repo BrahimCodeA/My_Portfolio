@@ -43,6 +43,7 @@ nav .theme {
     cursor: pointer;
     border: none;
     transition: 0.4s;
+    border: none;
 }
 nav .theme:hover {
     transform: scale(1.1);

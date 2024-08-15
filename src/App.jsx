@@ -14,7 +14,7 @@ const App = () => {
       <Navbar />
       <div className="container">
         <Hero />
-        <Title subTitle="About" title="À Propos De Moi" />
+        <Title subTitle="About" title="À Propos de moi" />
         <About />
         <Title subTitle="Skills" title="Mes Compétences" />
         <Skills />

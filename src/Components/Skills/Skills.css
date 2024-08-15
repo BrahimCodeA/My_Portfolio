@@ -118,3 +118,9 @@
         width: 1.2em;
     }
 }
+
+@media (max-width:490px) {
+    .Skills h3 {
+        font-size: 1.2em;
+    }
+}
