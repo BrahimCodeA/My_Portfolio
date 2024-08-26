@@ -41,7 +41,7 @@ const Hero = () => {
             <a href="https://github.com/BrahimCodeA" target="_blank">
               <img src={icon_github} alt="GitHub Icon" />
             </a>
-            <a href="http://dekubrahim.pythonanywhere.com" target="_blank">
+            <a href="https://mern-app-f7z7.onrender.com" target="_blank">
               <img src={icon_domaine} alt="Domain Icon" />
             </a>
           </h1>

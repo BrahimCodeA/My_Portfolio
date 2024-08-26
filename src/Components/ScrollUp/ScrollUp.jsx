@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./ScrollUp.css";
-import scroll_up from "../../assets/scrollup.png";
+import { FaCircleArrowUp } from "react-icons/fa6";
 
 const ScrollUp = () => {
   useEffect(() => {
@@ -19,13 +19,13 @@ const ScrollUp = () => {
 
   return (
     <>
-      <div href="#" className="scrollup">
-        <img
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          src={scroll_up}
-          className="scrollup_icon"
-          alt="Scroll to top"
-        />
+      <div
+        href="#"
+        className="scrollup"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        alt="Scroll to top"
+      >
+        <FaCircleArrowUp className="scrollup_icon" />
       </div>
     </>
   );
