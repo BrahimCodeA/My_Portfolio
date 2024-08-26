@@ -33,10 +33,18 @@ const Projet = () => {
           </p>
         </p>
         <div className="links">
-          <a href="#" className="gray-link" target={"_blank"}>
+          <a
+            href="https://mern-app-f7z7.onrender.com"
+            className="gray-link"
+            target={"_blank"}
+          >
             <img src={icon_domaine} alt="" className="img" />
           </a>
-          <a href="#" className="black-link" target={"__blank"}>
+          <a
+            href="https://github.com/BrahimCodeA/Mern-app"
+            className="black-link"
+            target={"__blank"}
+          >
             <img src={icon_github} alt="" className="img" />
           </a>
         </div>
