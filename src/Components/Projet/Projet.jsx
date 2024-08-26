@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./Projet.css";
 import Projet1 from "../../assets/Projet-1.jpeg";
 import Projet2 from "../../assets/Projet-2.jpeg";
-import Projet3 from "../../assets/Projet-3.jpg";
+import Projet3 from "../../assets/Projet-3.png";
 import icon_github from "../../assets/icon-github.png";
 import icon_domaine from "../../assets/icon-domaine.png";
 
