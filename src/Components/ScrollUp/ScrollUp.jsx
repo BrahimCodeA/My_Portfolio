@@ -14,15 +14,20 @@ const ScrollUp = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <a href="#" className="scrollup">
-      <img src={scroll_up} className="scrollup_icon" alt="Scroll to top" />
-    </a>
+    <>
+      <div href="#" className="scrollup">
+        <img
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          src={scroll_up}
+          className="scrollup_icon"
+          alt="Scroll to top"
+        />
+      </div>
+    </>
   );
 };
 
