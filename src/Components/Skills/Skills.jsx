@@ -43,6 +43,16 @@ const Skills = () => {
           </li>
           <li>
             <h3>
+              - Redux{" "}
+              <img
+                src="https://simpleicons.org/icons/redux.svg"
+                alt="React Logo"
+                className="logo"
+              />
+            </h3>
+          </li>
+          <li>
+            <h3>
               - HTML / CSS{" "}
               <img
                 src="https://simpleicons.org/icons/html5.svg"
