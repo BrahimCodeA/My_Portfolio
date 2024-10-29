@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./About.css";
-import CV from "../../assets/IbrahimDaoudi_CV.jpg";
-import Cv_pdf from "../../assets/IbrahimDaoudi_CV.pdf";
+import CV from "../../assets/Daoudi_CV.jpg";
+import Cv_pdf from "../../assets/Daoudi_CV.pdf";
 
 const About = () => {
   const newsletterRef = useRef();

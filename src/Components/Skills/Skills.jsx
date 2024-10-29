@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "./Skills.css";
 import Node from "../../assets/node.png";
+import Ts from "../../assets/TypeScript.png";
+import Sass from "../../assets/Sass.png";
 import express from "../../assets/express.svg";
+import mysql from "../../assets/mysql.png";
 
 const Skills = () => {
   const newSkillsRef = useRef();
@@ -43,10 +46,16 @@ const Skills = () => {
           </li>
           <li>
             <h3>
+              - TypeScript
+              <img src={Ts} alt="TypeScript Logo" className="logo" />
+            </h3>
+          </li>
+          <li>
+            <h3>
               - Redux{" "}
               <img
                 src="https://simpleicons.org/icons/redux.svg"
-                alt="React Logo"
+                alt="Redux Logo"
                 className="logo"
               />
             </h3>
@@ -64,6 +73,11 @@ const Skills = () => {
                 alt="CSS Logo"
                 className="logo"
               />
+            </h3>
+          </li>
+          <li>
+            <h3>
+              - Sass <img src={Sass} alt="Sass Logo" className="logo" />
             </h3>
           </li>
           <li>
@@ -110,6 +124,11 @@ const Skills = () => {
             <h3>
               - Express{" "}
               <img src={express} alt="Express logo" className="logo" />
+            </h3>
+          </li>
+          <li>
+            <h3>
+              - MySQL <img src={mysql} alt="Express logo" className="logo" />
             </h3>
           </li>
           <li>

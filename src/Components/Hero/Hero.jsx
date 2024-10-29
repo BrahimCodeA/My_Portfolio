@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Hero.css";
-import hero from "../../assets/hero.jpeg";
+import heroImg from "../../assets/CVPHOTO-2.jpeg";
 import dark_arrow from "../../assets/dark-arrow.png";
 import icon_linkedin from "../../assets/icon-linkedin.png";
 import icon_github from "../../assets/icon-github.png";
@@ -58,7 +58,7 @@ const Hero = () => {
         </div>
         <div class="hero-right">
           <link rel="stylesheet" href="" />
-          <img src={hero} alt="Hero Image" class="hero-img" />
+          <img src={heroImg} alt="Hero Image" class="hero-img" />
         </div>
       </div>
     </div>
